@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('obfuscated.min.css') }}">
-    <title>{{ $title ?? 'Page Title' }}</title>
+    <title>{{ $title ?? 'Sifat Cargo' }}</title>
     @vite('resources/css/app.css')
     @vite('resources/js/app.js')
 
@@ -17,7 +17,7 @@
             <flux:avatar src="{{ asset('assets/photo_2025-09-25_23-47-38.png') }}" />
             <div class="text-center">
                 <flux:heading class="uppercase text-xl/5">Sifat-Cargo</flux:heading>
-                <flux:text class="text-sm/4">transport company</flux:text>
+                <flux:text class="text-sm/4">logistic company</flux:text>
             </div>
 
             @livewire('components.notify')
