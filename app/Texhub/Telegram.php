@@ -53,7 +53,7 @@ class Telegram extends \DefStudio\Telegraph\Handlers\WebhookHandler
     }
     public function start(): void
     {
-        $this->chat->photo(public_path('assets/welcome.png'))->message("Салом " . $this->message->from()->firstName() . "! \nИн телеграм боти <b>Sifat Cargo</b> мебошад! \nБарои истифода бурдан аввал забонро интихоб кунед!\n\nЭто телеграм бот <b>Sifat Cargo!</b> \nЧтобы использовать, сначала выберите язык! ⤵️")
+        $this->chat->photo('AgACAgIAAxkBAANIaUelAAErTdvdDhJmVfXRLYQn8dQnAAIIDGsbvIdAStS9uCCouj5kAQADAgADeQADNgQ')->message("Салом " . $this->message->from()->firstName() . "! \nИн телеграм боти <b>Sifat Cargo</b> мебошад! \nБарои истифода бурдан аввал забонро интихоб кунед!\n\nЭто телеграм бот <b>Sifat Cargo!</b> \nЧтобы использовать, сначала выберите язык! ⤵️")
             ->keyboard(
                 Keyboard::make()
                     ->row([
@@ -263,8 +263,8 @@ class Telegram extends \DefStudio\Telegraph\Handlers\WebhookHandler
                         ->keyboard(
                             Keyboard::make()
                                 ->row([
-                                        Button::make('Изменить')->action('edit_profile')->param('id', $user->id),
-                                    ])
+                                    Button::make('Изменить')->action('edit_profile')->param('id', $user->id),
+                                ])
                         )->send();
                 } else {
                     $this->chat->message("👤 Ном: " . ($user->name ?? '—') . "\n📞 Рақами телефон: " . ($user->phone ?? '—'))->send();
@@ -272,8 +272,8 @@ class Telegram extends \DefStudio\Telegraph\Handlers\WebhookHandler
                         ->keyboard(
                             Keyboard::make()
                                 ->row([
-                                        Button::make('Тағйир додан')->action('edit_profile')->param('id', $user->id),
-                                    ])
+                                    Button::make('Тағйир додан')->action('edit_profile')->param('id', $user->id),
+                                ])
                         )->send();
                 }
             }
@@ -401,32 +401,32 @@ class Telegram extends \DefStudio\Telegraph\Handlers\WebhookHandler
                         ->keyboard(
                             Keyboard::make()
                                 ->row([
-                                        Button::make('Мужской')
-                                            ->action('sex_radio')
-                                            ->param('id', $user->id)
-                                            ->param('sex', 'm'),
+                                    Button::make('Мужской')
+                                        ->action('sex_radio')
+                                        ->param('id', $user->id)
+                                        ->param('sex', 'm'),
 
-                                        Button::make('Женский')
-                                            ->action('sex_radio')
-                                            ->param('id', $user->id)
-                                            ->param('sex', 'z'),
-                                    ])
+                                    Button::make('Женский')
+                                        ->action('sex_radio')
+                                        ->param('id', $user->id)
+                                        ->param('sex', 'z'),
+                                ])
                         )->send();
                 } else {
                     $this->chat->message("☑️ Ҷинси худро нишон диҳед, масалан: <b>Мард</b> ё <b>Зан</b>")
                         ->keyboard(
                             Keyboard::make()
                                 ->row([
-                                        Button::make('Мард')
-                                            ->action('sex_radio')
-                                            ->param('id', $user->id)
-                                            ->param('sex', 'm'),
+                                    Button::make('Мард')
+                                        ->action('sex_radio')
+                                        ->param('id', $user->id)
+                                        ->param('sex', 'm'),
 
-                                        Button::make('Зан')
-                                            ->action('sex_radio')
-                                            ->param('id', $user->id)
-                                            ->param('sex', 'z'),
-                                    ])
+                                    Button::make('Зан')
+                                        ->action('sex_radio')
+                                        ->param('id', $user->id)
+                                        ->param('sex', 'z'),
+                                ])
                         )->send();
                 }
                 return;
@@ -511,11 +511,11 @@ class Telegram extends \DefStudio\Telegraph\Handlers\WebhookHandler
                     ->keyboard(
                         Keyboard::make()
                             ->row([
-                                    Button::make('Телеграм канал')->url('https://t.me/+w9Bn21AyE11mMTUy'),
-                                ])
+                                Button::make('Телеграм канал')->url('https://t.me/+w9Bn21AyE11mMTUy'),
+                            ])
                             ->row([
-                                    Button::make('Тамос бо мушовир')->action('open_chat'),
-                                ])
+                                Button::make('Тамос бо мушовир')->action('open_chat'),
+                            ])
                     )->send();
             } else {
                 $this->chat->photo(public_path('assets/chat_tj.png'))->message("<b>Реҷаи корӣ</b> аз Душанбе то Якшанбе соатҳои <b>08:00 то 18:00</b>.\n\nДар вақти корӣ бо мо тамос гиред ҳатман ба саволҳоятон ҷавоб медиҳем!\n\nБо мо тарики яке аз паёмрасонҳои зер тамос гиред, ё дар худи бот бо мушовир пайваст шавед! ⤵️")
@@ -526,8 +526,8 @@ class Telegram extends \DefStudio\Telegraph\Handlers\WebhookHandler
                                 Button::make('Телеграм канал')->url('https://t.me/+w9Bn21AyE11mMTUy'),
                             ])
                             ->row([
-                                    Button::make('Тамос бо мушовир')->action('open_chat'),
-                                ])
+                                Button::make('Тамос бо мушовир')->action('open_chat'),
+                            ])
                     )->send();
             }
 
@@ -563,15 +563,15 @@ class Telegram extends \DefStudio\Telegraph\Handlers\WebhookHandler
                 $this->chat->photo(public_path('assets/track_code_ru.png'))->message("Отправьте трек-код вашего груза для проверки!")
                     ->replyKeyboard(ReplyKeyboard::make()
                         ->row([
-                                ReplyButton::make('🔄 Основной меню'),
-                            ])
+                            ReplyButton::make('🔄 Основной меню'),
+                        ])
                         ->resize())->send();
             } else {
                 $this->chat->photo(public_path('assets/track_code_tj.png'))->message("📦🔍 Трек-коди бори худро барои тафтиш равон кунед!")
                     ->replyKeyboard(ReplyKeyboard::make()
                         ->row([
-                                ReplyButton::make('🔄 Менюи асосӣ'),
-                            ])
+                            ReplyButton::make('🔄 Менюи асосӣ'),
+                        ])
                         ->resize())->send();
             }
             return;
@@ -616,8 +616,8 @@ class Telegram extends \DefStudio\Telegraph\Handlers\WebhookHandler
         if ($text == 'supershifu') {
             $this->chat->message(('Добро пожаловать в панел управление!'))
                 ->keyboard(Keyboard::make()->buttons([
-                            Button::make('Открыт панель управлению')->webApp('https://sifatcargo.texhub.pro/admin/dashboard'),
-                        ]))->send();
+                    Button::make('Открыт панель управлению')->webApp('https://sifatcargo.texhub.pro/admin/dashboard'),
+                ]))->send();
             return;
         }
         $trackcode = Trackcode::where('code', str($text))->first();
@@ -747,9 +747,9 @@ class Telegram extends \DefStudio\Telegraph\Handlers\WebhookHandler
                 ->keyboard(
                     Keyboard::make()
                         ->row([
-                                Button::make('🔁 Возврат')->action('order_del_status')->param('order_id', $order_id)->param('apl_id', $application_id)->param('status', 'returned'),
-                                Button::make('📦 Доставлено')->action('order_del_status')->param('order_id', $order_id)->param('apl_id', $application_id)->param('status', 'delivered'),
-                            ])
+                            Button::make('🔁 Возврат')->action('order_del_status')->param('order_id', $order_id)->param('apl_id', $application_id)->param('status', 'returned'),
+                            Button::make('📦 Доставлено')->action('order_del_status')->param('order_id', $order_id)->param('apl_id', $application_id)->param('status', 'delivered'),
+                        ])
                 )->send();
         }
     }
