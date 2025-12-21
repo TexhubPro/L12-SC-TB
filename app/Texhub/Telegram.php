@@ -221,7 +221,7 @@ class Telegram extends \DefStudio\Telegraph\Handlers\WebhookHandler
     {
 
         if ($this->message->photos()) {
-            $this->chat->message($this->message->photos()->id())->send();
+            $this->chat->message($this->message->photos())->send();
             return;
         }
 
