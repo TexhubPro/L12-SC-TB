@@ -1,0 +1,74 @@
+<?php
+
+namespace App\Livewire\Admin;
+
+use Carbon\Carbon;
+use Livewire\Component;
+use App\Texhub\Telegram;
+use App\Models\Trackcode;
+use Livewire\WithFileUploads;
+use Livewire\Attributes\Layout;
+use App\Jobs\SendTrackNotification;
+use Maatwebsite\Excel\Facades\Excel;
+use Maatwebsite\Excel\Excel as Hello;
+
+#[Layout('components.layouts.admin')]
+class China extends Component
+{
+    use WithFileUploads;
+    public $excelfile;
+    public $singleTrack;
+    public $date;
+
+    public function mount()
+    {
+        $this->date = Carbon::now();
+    }
+
+    public function updatedDate()
+    {
+        // dd($this->date);
+    }
+    public function addSingleTrack()
+    {
+        $trackcode = Trackcode::where('code', $this->singleTrack)->first();
+        if ($trackcode) {
+            $trackcode->china = Carbon::now();
+            $trackcode->status = "Получено в Иву";
+            $trackcode->save();
+            if ($trackcode->user_id) {
+                $sms = new Telegram();
+                $sms->sms_send_ivu($trackcode->user_id, $trackcode);
+            }
+        } else {
+            Trackcode::create([
+                'code' => $this->singleTrack,
+                'china' => Carbon::now(),
+                'status' => "Получено в Иву"
+            ]);
+        }
+        $this->dispatch('alert', 'Данные успешно загружены!');
+        $this->reset(['singleTrack', 'excelfile']);
+    }
+    public function importExcel()
+    {
+        $this->validate([
+            'excelfile' => 'required|file|mimes:xlsx,csv,xls',
+        ]);
+
+        $data = Excel::toArray([], $this->excelfile, null, Hello::XLSX);
+        foreach ($data[0] as $key => $row) {
+            if ($key == 0) {
+                continue;
+            }
+            SendTrackNotification::dispatch(trim($row[0]), trim($row[1]) ?? $this->date);
+        }
+        $this->reset(['singleTrack', 'excelfile', 'date']);
+        $this->dispatch('alert', 'Данные успешно загружены!');
+        return redirect()->route('admin.china');
+    }
+    public function render()
+    {
+        return view('livewire.admin.china');
+    }
+}

@@ -1,0 +1,36 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('trackcodes', function (Blueprint $table) {
+            $table->id();
+            $table->string('code');
+            $table->integer('user_id')->nullable();
+            $table->integer('order_id')->nullable();
+            $table->string('china')->nullable();
+            $table->string('dushanbe')->nullable();
+            $table->string('customer')->nullable();
+            $table->string('race')->nullable();
+            $table->string('weight')->nullable();
+            $table->string('status')->default('В ожидании');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('trackcodes');
+    }
+};
