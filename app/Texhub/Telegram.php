@@ -224,6 +224,7 @@ class Telegram extends \DefStudio\Telegraph\Handlers\WebhookHandler
             $this->chat->message($this->message->photo()->id())->send();
             return;
         }
+
         $user = User::where('chat_id', $this->message->from()->id())->first();
 
         if ($text == '❌ Закрыт чат' || $text == '❌ Пушидани чат') {
