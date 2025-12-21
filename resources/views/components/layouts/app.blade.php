@@ -16,7 +16,7 @@
         <div class="bg-neutral-800 rounded-xl border-neutral-700 border flex justify-between items-center p-1">
             <flux:avatar src="{{ asset('assets/photo_2025-09-25_23-47-38.png') }}" />
             <div class="text-center">
-                <flux:heading class="uppercase text-xl/5">Shifu Cargo</flux:heading>
+                <flux:heading class="uppercase text-xl/5">Sifat-Cargo</flux:heading>
                 <flux:text class="text-sm/4">transport company</flux:text>
             </div>
 
