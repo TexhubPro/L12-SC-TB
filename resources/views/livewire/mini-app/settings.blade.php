@@ -23,7 +23,8 @@
                 <flux:radio value="z" label="Женский" />
             </flux:radio.group>
 
-            <flux:button variant="primary" color="lime" class="w-full" type="submit">Сохранить изменения</flux:button>
+            <flux:button variant="primary" color="blue" class="w-full" type="submit">Сохранить изменения
+            </flux:button>
         </div>
     </form>
 </div>
