@@ -4,7 +4,7 @@
             <flux:heading>Все ваши трек-коды</flux:heading>
             <flux:text class="text-xs">Отслеживайте статус всех ваших посылок</flux:text>
         </div>
-        <flux:button variant="primary" size="sm" color="lime" href="{{ route('add-order') }}">Добавить</flux:button>
+        <flux:button variant="primary" size="sm" color="blue" href="{{ route('add-order') }}">Добавить</flux:button>
     </div>
     @if ($orders->count() > 0)
         <flux:table :paginate="$orders">
@@ -27,7 +27,7 @@
                                 @break
 
                                 @case('Получено в Иву')
-                                    <flux:badge color="lime" size="sm" inset="top bottom">
+                                    <flux:badge color="blue" size="sm" inset="top bottom">
                                         {{ $order->status }}
                                     </flux:badge>
                                 @break

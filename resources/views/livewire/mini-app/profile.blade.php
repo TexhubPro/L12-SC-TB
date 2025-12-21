@@ -12,7 +12,7 @@
             @endif
             <div>
                 <flux:heading class="text-xl/5 uppercase">{{ Auth::user()->name }}<span
-                        class="text-lime-500 font-semibold ml-3">{{ Auth::user()->code }}</span>
+                        class="text-blue-500 font-semibold ml-3">{{ Auth::user()->code }}</span>
                 </flux:heading>
                 <flux:text>{{ Auth::user()->phone }}</flux:text>
             </div>
@@ -20,7 +20,7 @@
     </div>
     <div class="grid grid-cols-3 gap-3">
         <a href="{{ route('all-orders') }}" class="rounded-xl p-2 bg-neutral-800 border border-neutral-700 space-y-1">
-            <div class="p-1.5 w-min rounded-lg bg-lime-500 text-white">
+            <div class="p-1.5 w-min rounded-lg bg-blue-500 text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -31,7 +31,7 @@
             <p class="text-sm/4 text-white font-semibold">Все трек-коды</p>
         </a>
         <a href="{{ route('add-order') }}" class="rounded-xl p-2 bg-neutral-800 border border-neutral-700 space-y-1">
-            <div class="p-1.5 w-min rounded-lg bg-lime-500 text-white">
+            <div class="p-1.5 w-min rounded-lg bg-blue-500 text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="icon icon-tabler icons-tabler-outline icon-tabler-circle-plus">
@@ -44,7 +44,7 @@
             <p class="text-sm/4 text-white font-semibold">Добавить трек-код</p>
         </a>
         <a href="{{ route('check-order') }}" class="rounded-xl p-2 bg-neutral-800 border border-neutral-700 space-y-1">
-            <div class="p-1.5 w-min rounded-lg bg-lime-500 text-white">
+            <div class="p-1.5 w-min rounded-lg bg-blue-500 text-white">
                 <svg s xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="icon icon-tabler icons-tabler-outline icon-tabler-file-search">
@@ -58,7 +58,7 @@
             <p class="text-sm/4 text-white font-semibold">Проверить трек-код</p>
         </a>
         <a href="{{ route('application') }}" class="rounded-xl p-2 bg-neutral-800 border border-neutral-700 space-y-1">
-            <div class="p-1.5 w-min rounded-lg bg-lime-500 text-white">
+            <div class="p-1.5 w-min rounded-lg bg-blue-500 text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="icon icon-tabler icons-tabler-outline icon-tabler-truck-delivery">
@@ -72,7 +72,7 @@
             <p class="text-sm/4 text-white font-semibold">Заказать доставка</p>
         </a>
         <a href="{{ route('queue') }}" class="rounded-xl p-2 bg-neutral-800 border border-neutral-700 space-y-1">
-            <div class="p-1.5 w-min rounded-lg bg-lime-500 text-white">
+            <div class="p-1.5 w-min rounded-lg bg-blue-500 text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="icon icon-tabler icons-tabler-outline icon-tabler-alarm">
@@ -86,7 +86,7 @@
             <p class="text-sm/4 text-white font-semibold">Взять очередь</p>
         </a>
         <a href="{{ route('support') }}" class="rounded-xl p-2 bg-neutral-800 border border-neutral-700 space-y-1">
-            <div class="p-1.5 w-min rounded-lg bg-lime-500 text-white">
+            <div class="p-1.5 w-min rounded-lg bg-blue-500 text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="icon icon-tabler icons-tabler-outline icon-tabler-brand-wechat">
@@ -105,7 +105,7 @@
         </a>
         <a href="{{ route('calculator') }}"
             class="rounded-xl p-2 bg-neutral-800 border border-neutral-700 space-y-1">
-            <div class="p-1.5 w-min rounded-lg bg-lime-500 text-white">
+            <div class="p-1.5 w-min rounded-lg bg-blue-500 text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-calculator">
@@ -123,7 +123,7 @@
             <p class="text-sm/4 text-white font-semibold">Калькулятор грузов</p>
         </a>
         <a href="{{ route('faqs') }}" class="rounded-xl p-2 bg-neutral-800 border border-neutral-700 space-y-1">
-            <div class="p-1.5 w-min rounded-lg bg-lime-500 text-white">
+            <div class="p-1.5 w-min rounded-lg bg-blue-500 text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-question-mark">
@@ -135,7 +135,7 @@
             <p class="text-sm/4 text-white font-semibold">Частые вопросы</p>
         </a>
         <a href="{{ route('settings') }}" class="rounded-xl p-2 bg-neutral-800 border border-neutral-700 space-y-1">
-            <div class="p-1.5 w-min rounded-lg bg-lime-500 text-white">
+            <div class="p-1.5 w-min rounded-lg bg-blue-500 text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-settings">

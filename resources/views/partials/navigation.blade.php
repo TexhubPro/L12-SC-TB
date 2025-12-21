@@ -4,7 +4,7 @@
             <div class="bg-white rounded-xl relative h-12">
                 <div class="absolute top-0 left-0 grid grid-cols-5 w-full h-full gap-2 p-2">
                     <a href="{{ route('profile') }}"
-                        class="flex flex-col justify-center items-center text-black hover:text-lime-500">
+                        class="flex flex-col justify-center items-center text-black hover:text-blue-500">
                         <svg class="size-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round"
@@ -16,7 +16,7 @@
                         </svg>
                     </a>
                     <a href="{{ route('all-orders') }}"
-                        class="flex flex-col justify-center items-center hover:text-lime-500 text-black">
+                        class="flex flex-col justify-center items-center hover:text-blue-500 text-black">
                         <svg class="size-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round"
@@ -31,7 +31,7 @@
 
 
                     <a href="{{ route('add-order') }}"
-                        class="flex flex-col justify-center items-center  text-white bg-lime-500 rounded-lg">
+                        class="flex flex-col justify-center items-center  text-white bg-blue-500 rounded-lg">
                         <svg class="size-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round"
@@ -42,7 +42,7 @@
                         </svg>
                     </a>
                     <a href="{{ route('support') }}"
-                        class="flex flex-col justify-center items-center hover:text-lime-500 text-black">
+                        class="flex flex-col justify-center items-center hover:text-blue-500 text-black">
                         <svg class="size-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round"
@@ -56,7 +56,7 @@
                         </svg>
                     </a>
                     <a href="{{ route('settings') }}"
-                        class="flex flex-col justify-center items-center hover:text-lime-500 text-black">
+                        class="flex flex-col justify-center items-center hover:text-blue-500 text-black">
                         <svg class="size-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round"
