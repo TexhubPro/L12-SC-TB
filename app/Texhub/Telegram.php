@@ -220,12 +220,12 @@ class Telegram extends \DefStudio\Telegraph\Handlers\WebhookHandler
     public function handleChatMessage(Stringable $text): void
     {
 
-        if ($this->message->photos()) {
-            foreach ($this->message->photos() as $photo) {
-                $this->chat->message($photo->id())->send();
-            }
-            return;
-        }
+        // if ($this->message->photos()) {
+        //     foreach ($this->message->photos() as $photo) {
+        //         $this->chat->message($photo->id())->send();
+        //     }
+        //     return;
+        // }
 
         $user = User::where('chat_id', $this->message->from()->id())->first();
 
