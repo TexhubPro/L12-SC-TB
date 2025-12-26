@@ -72,7 +72,7 @@ Route::middleware('auth')->group(function () {
     })->name('logout');
 });
 Route::middleware(['auth', Admin::class])->prefix('admin')->name('admin.')->group(function () {
-    Route::get('/dashboard', Dashboard::class)->name('dashboard');
+    Route::get('/', Dashboard::class)->name('dashboard');
     Route::get('/china', China::class)->name('china');
     Route::get('/dushanbe', Dushanbe::class)->name('dushanbe');
     Route::get('/trackcodes', Trackcodes::class)->name('trackcodes');
