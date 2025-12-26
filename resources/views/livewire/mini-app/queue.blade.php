@@ -11,7 +11,7 @@
     @else
         <form wire:submit="load" class="bg-neutral-800 border border-neutral-700 rounded-xl p-2 mt-5 space-y-3">
             <flux:input wire:model="code" required label="Код подтвержления" placeholder="Введите код" />
-            <flux:button type="submit" variant="primary" color="blue" class="w-full">Взять очередь</flux:button>
+            <flux:button type="submit" variant="primary" color="lime" class="w-full">Взять очередь</flux:button>
         </form>
     @endif
 </div>

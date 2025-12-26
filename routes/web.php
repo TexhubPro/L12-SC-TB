@@ -22,7 +22,9 @@ use App\Http\Middleware\Deliver as MidDeliver;
 use App\Livewire\Admin\Analitic;
 use App\Livewire\Admin\Faqs as AdminFaqs;
 use App\Livewire\Admin\Orders;
+use App\Livewire\Admin\OrderShow;
 use App\Livewire\Admin\RegisterPack;
+use App\Livewire\Admin\Profile as AdminProfile;
 use App\Livewire\Applicant;
 use App\Livewire\Login;
 use App\Livewire\Manager;
@@ -41,6 +43,7 @@ use App\Livewire\MiniApp\Support;
 use App\Livewire\Queue as LivewireQueue;
 use App\Livewire\QueueControl;
 use App\Livewire\QueueKiosk;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('guest')->group(function () {
@@ -60,6 +63,13 @@ Route::middleware('auth')->group(function () {
     Route::get('/settings', Settings::class)->name('settings');
     Route::get('/notify', Notify::class)->name('notify');
     Route::get('/testqueue', SendNotification::class)->name('testqueue');
+    Route::get('/logout', function () {
+        Auth::logout();
+        request()->session()->invalidate();
+        request()->session()->regenerateToken();
+
+        return redirect()->route('login');
+    })->name('logout');
 });
 Route::middleware(['auth', Admin::class])->prefix('admin')->name('admin.')->group(function () {
     Route::get('/dashboard', Dashboard::class)->name('dashboard');
@@ -76,8 +86,10 @@ Route::middleware(['auth', Admin::class])->prefix('admin')->name('admin.')->grou
     Route::get('/expences', Expences::class)->name('expences');
     Route::get('/faqs', AdminFaqs::class)->name('faqs');
     Route::get('/orders', Orders::class)->name('orders');
+    Route::get('/orders/{order}', OrderShow::class)->name('orders.show');
     Route::get('/analitic', Analitic::class)->name('analitic');
     Route::get('/register-pack', RegisterPack::class)->name('register-pack');
+    Route::get('/admin-profile', AdminProfile::class)->name('admin-profile');
 });
 Route::middleware(['auth', Cashier::class])->group(function () {
     Route::get('/cashier', Chashdesk::class)->name('cashier');

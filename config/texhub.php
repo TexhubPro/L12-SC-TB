@@ -2,7 +2,7 @@
 
 return [
     // Ai Assistant
-    'ai_token' => '',
+    'ai_token' => env('OPENAI_API_KEY', ''),
     'ai_base_url' => 'https://api.openai.com/v1',
 
     //Webhook

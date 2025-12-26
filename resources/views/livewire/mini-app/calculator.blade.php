@@ -16,11 +16,11 @@
             <flux:tab.panel name="by-weight" class="space-y-3">
                 <form wire:submit.prevent="calcWeight" class="space-y-3">
                     <flux:input wire:model="weight" required label="Вес (кг)" placeholder="Введите вес товара" />
-                    <flux:button type="submit" variant="primary" color="blue" class="w-full">Рассчитать</flux:button>
+                    <flux:button type="submit" variant="primary" color="lime" class="w-full">Рассчитать</flux:button>
                 </form>
 
-                @if ($resultWeight)
-                    <flux:text color="blue">{{ $resultWeight }}</flux:text>
+                @if($resultWeight)
+                <flux:text color="blue">{{ $resultWeight }}</flux:text>
                 @endif
             </flux:tab.panel>
 
@@ -30,11 +30,11 @@
                     <flux:input wire:model="length" required label="Длина (см)" placeholder="Введите длину" />
                     <flux:input wire:model="width" required label="Ширина (см)" placeholder="Введите ширину" />
                     <flux:input wire:model="height" required label="Высота (см)" placeholder="Введите высоту" />
-                    <flux:button type="submit" variant="primary" color="blue" class="w-full">Рассчитать</flux:button>
+                    <flux:button type="submit" variant="primary" color="lime" class="w-full">Рассчитать</flux:button>
                 </form>
 
-                @if ($resultVolume)
-                    <flux:text color="blue">{{ $resultVolume }}</flux:text>
+                @if($resultVolume)
+                <flux:text color="blue">{{ $resultVolume }}</flux:text>
                 @endif
             </flux:tab.panel>
         </flux:tab.group>
