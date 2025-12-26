@@ -49,6 +49,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('guest')->group(function () {
     Route::get('/register/{id?}', Register::class)->name('register');
     Route::get('/login', Login::class)->name('login');
+    Route::get('/', function () {
+        return redirect()->route('admin.dashboard');
+    });
 });
 Route::get('/profile/{id?}', Profile::class)->name('profile');
 Route::middleware('auth')->group(function () {
@@ -72,7 +75,7 @@ Route::middleware('auth')->group(function () {
     })->name('logout');
 });
 Route::middleware(['auth', Admin::class])->prefix('admin')->name('admin.')->group(function () {
-    Route::get('/', Dashboard::class)->name('dashboard');
+    Route::get('/dashboard', Dashboard::class)->name('dashboard');
     Route::get('/china', China::class)->name('china');
     Route::get('/dushanbe', Dushanbe::class)->name('dushanbe');
     Route::get('/trackcodes', Trackcodes::class)->name('trackcodes');
