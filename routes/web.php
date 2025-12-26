@@ -49,9 +49,6 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('guest')->group(function () {
     Route::get('/register/{id?}', Register::class)->name('register');
     Route::get('/login', Login::class)->name('login');
-    Route::get('/', function () {
-        return redirect()->route('admin.dashboard');
-    });
 });
 Route::get('/profile/{id?}', Profile::class)->name('profile');
 Route::middleware('auth')->group(function () {
