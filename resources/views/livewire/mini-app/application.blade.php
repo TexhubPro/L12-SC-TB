@@ -136,7 +136,7 @@
                     сообщим об этом.
                 </div>
                 <a class="inline-flex items-center gap-2 text-sm font-semibold text-amber-700 hover:text-amber-800"
-                    href="https://www.instagram.com/cargo_shifu" target="_blank" rel="noopener noreferrer">
+                    href="https://www.instagram.com/sifat.cargo" target="_blank" rel="noopener noreferrer">
                     Написать в Instagram
                     <span aria-hidden="true">→</span>
                 </a>
