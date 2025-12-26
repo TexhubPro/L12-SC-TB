@@ -32,14 +32,14 @@ class Telegram extends \DefStudio\Telegraph\Handlers\WebhookHandler
         $chat->step = 'ai';
         $chat->save();
         if ($this->chat->lang == 'ru') {
-            $this->chat->message("Привет! 👋 Я ассистент компании Shifu Cargo. Чем могу помочь?")
+            $this->chat->message("Привет! 👋 Я ассистент компании Sifat Cargo. Чем могу помочь?")
                 ->replyKeyboard(ReplyKeyboard::make()
                     ->row([
                         ReplyButton::make('❌ Закрыт чат'),
                     ])
                     ->resize())->send();
         } else {
-            $this->chat->message("Салом! 👋 Ман мушовири ширкати Shifu Cargo ҳастам. Чӣ кӯмак карда метавонам?")
+            $this->chat->message("Салом! 👋 Ман мушовири ширкати Sifat Cargo ҳастам. Чӣ кӯмак карда метавонам?")
                 ->replyKeyboard(ReplyKeyboard::make()
                     ->row([
                         ReplyButton::make('❌ Пушидани чат'),
@@ -53,7 +53,7 @@ class Telegram extends \DefStudio\Telegraph\Handlers\WebhookHandler
     }
     public function start(): void
     {
-        $this->chat->photo(public_path('assets/welcome.png'))->message("Салом " . $this->message->from()->firstName() . "! \nИн телеграм боти <b>Shifu Cargo</b> мебошад! \nБарои истифода бурдан аввал забонро интихоб кунед!\n\nЭто телеграм бот <b>Shifu Cargo!</b> \nЧтобы использовать, сначала выберите язык! ⤵️")
+        $this->chat->photo(public_path('assets/welcome.png'))->message("Салом " . $this->message->from()->firstName() . "! \nИн телеграм боти <b>Sifat Cargo</b> мебошад! \nБарои истифода бурдан аввал забонро интихоб кунед!\n\nЭто телеграм бот <b>Sifat Cargo!</b> \nЧтобы использовать, сначала выберите язык! ⤵️")
             ->keyboard(
                 Keyboard::make()
                     ->row([
@@ -73,7 +73,7 @@ class Telegram extends \DefStudio\Telegraph\Handlers\WebhookHandler
         sleep(2);
         $this->chat->message("📢 Барои огоҳӣ аз хабарҳои нав ба канали Telegram-и мо обуна шавед!\n\n🚀 Ҳамаи навгониҳо ва маълумот дар бораи рейсҳо маҳз дар ҳамин канал нашр мешаванд!")
             ->keyboard(Keyboard::make()->buttons([
-                Button::make('Cargo SHIFU')->url('https://t.me/cargoshifu'),
+                Button::make('Cargo Sifat')->url('https://t.me/+w9Bn21AyE11mMTUy'),
             ]))->send();
         sleep(2);
         $this->tj_keys();
@@ -89,7 +89,7 @@ class Telegram extends \DefStudio\Telegraph\Handlers\WebhookHandler
         sleep(2);
         $this->chat->message("📢 Чтобы быть в курсе новостей, подпишитесь на наш Telegram-канал!\n\n🚀 Все обновления и информация о рейсах публикуются только в этом канале! ")
             ->keyboard(Keyboard::make()->buttons([
-                Button::make('Cargo SHIFU')->url('https://t.me/cargoshifu'),
+                Button::make('Cargo Sifat')->url('https://t.me/+w9Bn21AyE11mMTUy'),
             ]))->send();
         sleep(2);
         $this->ru_keys();
@@ -102,7 +102,7 @@ class Telegram extends \DefStudio\Telegraph\Handlers\WebhookHandler
             ->replyKeyboard(ReplyKeyboard::make()
                 ->row([
                     ReplyButton::make('🔢 Тафтиши трек-код'),
-                    ReplyButton::make('🕹 Ҳуҷраи шахсӣ')->webApp("https://shifucargo.texhub.pro/profile/$chat_id"),
+                    ReplyButton::make('🕹 Ҳуҷраи шахсӣ')->webApp("https://sifatcargo.texhub.pro/profile/$chat_id"),
                 ])
                 ->row([
                     ReplyButton::make('➕ Обуна шудан'),
@@ -116,7 +116,7 @@ class Telegram extends \DefStudio\Telegraph\Handlers\WebhookHandler
                 ])
                 ->row([
                     ReplyButton::make('❌ Молҳои манъшуда'),
-                    ReplyButton::make('🧮 Ҳисобкунак')->webApp("https://shifucargo.texhub.pro/calculator"),
+                    ReplyButton::make('🧮 Ҳисобкунак')->webApp("https://sifatcargo.texhub.pro/calculator"),
                     ReplyButton::make('🎞 Дарсҳои ройгон'),
                 ])
                 ->resize())->send();
@@ -130,7 +130,7 @@ class Telegram extends \DefStudio\Telegraph\Handlers\WebhookHandler
             ->replyKeyboard(ReplyKeyboard::make()
                 ->row([
                     ReplyButton::make('🔢 Проверить трек-код'),
-                    ReplyButton::make('🕹 Личный кабинет')->webApp("https://shifucargo.texhub.pro/profile/$chat_id"),
+                    ReplyButton::make('🕹 Личный кабинет')->webApp("https://sifatcargo.texhub.pro/profile/$chat_id"),
                 ])
                 ->row([
                     ReplyButton::make('➕ Подписаться'),
@@ -144,7 +144,7 @@ class Telegram extends \DefStudio\Telegraph\Handlers\WebhookHandler
                 ])
                 ->row([
                     ReplyButton::make('❌ Запрещенные товары'),
-                    ReplyButton::make('🧮 Калькулятор')->webApp("https://shifucargo.texhub.pro/calculator"),
+                    ReplyButton::make('🧮 Калькулятор')->webApp("https://sifatcargo.texhub.pro/calculator"),
                     ReplyButton::make('🎞 Бесплатные уроки'),
                 ])
                 ->resize())->send();
@@ -519,7 +519,7 @@ class Telegram extends \DefStudio\Telegraph\Handlers\WebhookHandler
                     ->keyboard(
                         Keyboard::make()
                             ->row([
-                                Button::make('Телеграм канал')->url('https://t.me/cargoshifu'),
+                                Button::make('Телеграм канал')->url('https://t.me/+w9Bn21AyE11mMTUy'),
                             ])
                             ->row([
                                 Button::make('Тамос бо мушовир')->action('open_chat'),
@@ -531,7 +531,7 @@ class Telegram extends \DefStudio\Telegraph\Handlers\WebhookHandler
                         Keyboard::make()
 
                             ->row([
-                                Button::make('Телеграм канал')->url('https://t.me/cargoshifu'),
+                                Button::make('Телеграм канал')->url('https://t.me/+w9Bn21AyE11mMTUy'),
                             ])
                             ->row([
                                 Button::make('Тамос бо мушовир')->action('open_chat'),
@@ -602,7 +602,7 @@ class Telegram extends \DefStudio\Telegraph\Handlers\WebhookHandler
                 }
                 return;
             }
-            $locations = "联系人：shifu-$user->sex-$user->code\n$location->content-$user->code-$user->sex-$user->name-$user->phone";
+            $locations = "联系人：Sifat-$user->sex-$user->code\n$location->content-$user->code-$user->sex-$user->name-$user->phone";
 
             if ($this->chat->lang == 'ru') {
                 $this->chat->photo(public_path('assets/ivu_ru.png'))->message($locations)
@@ -621,10 +621,10 @@ class Telegram extends \DefStudio\Telegraph\Handlers\WebhookHandler
 
             return;
         }
-        if ($text == 'supershifu') {
+        if ($text == 'supersifat') {
             $this->chat->message(('Добро пожаловать в панел управление!'))
                 ->keyboard(Keyboard::make()->buttons([
-                    Button::make('Открыт панель управлению')->webApp('https://sifucargo.texhub.pro/admin/dashboard'),
+                    Button::make('Открыт панель управлению')->webApp('https://sifatcargo.texhub.pro/admin/dashboard'),
                 ]))->send();
             return;
         }
@@ -650,11 +650,11 @@ class Telegram extends \DefStudio\Telegraph\Handlers\WebhookHandler
                 }
             } else {
                 if ($this->chat->lang == 'ru') {
-                    $this->chat->photo(public_path('assets/ru_list.jpg'))->message(
+                    $this->chat->photo(public_path('assets/pending_ru.png'))->message(
                         "⏳ Ваш груз с трек-кодом <b>($trackcode->code)</b> находится в листе ожидания. Если статус изменится, мы сообщим вам!"
                     )->send();
                 } else {
-                    $this->chat->photo(public_path('assets/tj_list.jpg'))->message(
+                    $this->chat->photo(public_path('assets/pending_tj.png'))->message(
                         "⏳ Бори шумо бо трек-коди <b>($trackcode->code)</b> дар рӯйхати интизорӣ қарор дорад. Агар ҳолат тағйир ёбад, мо ба шумо хабар медиҳем!"
                     )->send();
                 }
@@ -735,7 +735,7 @@ class Telegram extends \DefStudio\Telegraph\Handlers\WebhookHandler
         if ($user->chat_id) {
             $chat = TelegraphChat::where('chat_id', $user->chat_id)->first();
             if ($file) {
-                $chat->document("https://shifucargo.texhub.pro$file")->send();
+                $chat->document("https://sifatcargo.texhub.pro$file")->send();
             }
             if ($chat->lang == 'ru') {
                 $chat->message("📦 Добрый день, уважаемый клиент!\n\n🚚 Вы успешно оформили доставку.\n⚖️ Вес: $order->weight кг\n📏 Объём: $order->cube м³\n💰 Подытог: $order->subtotal с\n💵 Скидка: $order->discount с\n🚛 Доставка: $order->delivery_total с\n✅ Итог: $order->total с\n\nСпасибо, что вы с нами! 💚")->send();
